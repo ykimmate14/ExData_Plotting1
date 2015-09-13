@@ -14,9 +14,9 @@ df[,2:8] <- lapply(df[,2:8], as.numeric)
 #setting up layout's dimension
 par(mfrow= c(2,2))
 # Creating plot 1
-with(df, hist(Global_active_power, col = "red", ylab = "Global Active Power"))
-# Creating plot 2
 with(df, plot(Date, Global_active_power, type = "l", xlab = "datetime", ylab = "Voltage"))
+# Creating plot 2
+with(df, plot(Date, Voltage, type = "l", xlab = "datetime", ylab = "Voltage"))
 # Creating plot 3
 with(df, plot(Date, Sub_metering_1, type = "l", ylab = "Energy sub metering"))
 with(df, lines(Date, Sub_metering_2, col = "red") )
